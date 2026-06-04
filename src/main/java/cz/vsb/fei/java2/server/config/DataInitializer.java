@@ -16,7 +16,9 @@ public class DataInitializer implements CommandLineRunner {
     public void run(String... args) {
         if (diffRepo.count() == 0) {
             for (int i = 1; i <= 10; i++) {
-                diffRepo.save(new DifficultyLevel(i));
+                int length = 2 * i + 3;
+                double speed = 0.4 * Math.pow(0.8, i - 1);
+                diffRepo.save(new DifficultyLevel(i, length, speed));
             }
         }
     }

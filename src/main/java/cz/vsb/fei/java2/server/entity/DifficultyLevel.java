@@ -18,7 +18,12 @@ public class DifficultyLevel {
     @Column(unique = true, nullable = false)
     private int levelNumber;
 
-    public DifficultyLevel(int levelNumber) {
+    private int centipedeLength;
+    private double stepTime;
+
+    public DifficultyLevel(int levelNumber, int centipedeLength, double stepTime) {
         this.levelNumber = levelNumber;
+        this.centipedeLength = centipedeLength;
+        this.stepTime = stepTime;
     }
 }
