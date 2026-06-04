@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="gamePanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lab.GameController">
+   <center>
+      <Canvas fx:id="canvas" height="990.0" width="690.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </Canvas>
+   </center>
+   <top>
+      <HBox alignment="CENTER" BorderPane.alignment="CENTER_RIGHT">
+         <children>
+            <Label alignment="CENTER" prefHeight="31.0" prefWidth="137.0" text="Hit count: " textAlignment="RIGHT" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="hits" text="0" textFill="#f20000" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="140.0" text="Health:   ">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="health" text="4" textFill="#f20000">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
